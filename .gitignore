@@ -10,8 +10,14 @@ capybara-*.html
 /tmp/*
 /db/*.db
 /public/system/*
+/public/assets/
 /coverage/
 /spec/tmp/*
+/cookbooks/
+/config/database.yml
+/config/redis.yml
+/.chef/data.json
+/.vagrant
 **.orig
 rerun.txt
 pickle-email-*.html
