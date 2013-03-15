@@ -39,6 +39,9 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
   gem 'guard-cucumber', require: false
+  gem 'guard-spork', :require => false
+
+  gem 'spork'
 
   gem 'rb-inotify', '~> 0.9', require: false
 
