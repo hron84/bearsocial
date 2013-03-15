@@ -46,16 +46,15 @@ group :development do
   gem 'pry-rails'
   
   gem 'thin'
-
-  gem 'vagrant', :require => false
 end
 
 group :production do
   gem 'pg'
 
   gem 'rack-protection'
+  gem 'exception_notification'
 
-  gem 'unicorn'
+  gem 'puma', :github => 'puma/puma'
 end
 
 group :app do
@@ -76,7 +75,9 @@ group :app do
 end
 
 group :deployment do
-  gem 'heroku', :require => false
+  gem 'capistrano', :require => false
+  gem 'capistrano-ext', :require => false
+  gem 'capistrano-maintenance', :require => false
 end
 
 group :background_tasks do
