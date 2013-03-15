@@ -68,8 +68,9 @@ group :app do
   gem 'kaminari'
   gem 'formtastic'
 
+  gem 'bcrypt-ruby'
   gem 'devise'
-  # gem 'devise-encryptable'
+  gem 'devise-encryptable'
   gem 'devise-i18n'
 
   # gem 'social_stream', '~> 1.0.0'
