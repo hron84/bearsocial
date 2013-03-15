@@ -1,0 +1,25 @@
+#!/bin/bash
+
+ME="$(readlink -f $0)"
+MYDIR="$(dirname "$ME")"
+RAILS_ROOT="$(dirname "$MYDIR")"
+
+PUMA_ARGS="-e production -b tcp://127.0.0.1:3001 -t 2:10 -w 1 -d"
+
+case "$1" in
+  start)
+    cd ${RAILS_ROOT} && bundle exec puma ${PUMA_ARGS}
+    ;;
+  stop)
+    PID=$(ps -ef | fgrep bin/puma | grep -v grep | tr -s ' ' | cut -d' ' -f2)
+    kill $PID
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac

@@ -39,6 +39,9 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
   gem 'guard-cucumber', require: false
+  gem 'guard-spork', :require => false
+
+  gem 'spork'
 
   gem 'rb-inotify', '~> 0.9', require: false
 
@@ -46,16 +49,15 @@ group :development do
   gem 'pry-rails'
   
   gem 'thin'
-
-  gem 'vagrant', :require => false
 end
 
 group :production do
   gem 'pg'
 
   gem 'rack-protection'
+  gem 'exception_notification'
 
-  gem 'unicorn'
+  gem 'puma', :github => 'puma/puma'
 end
 
 group :app do
@@ -76,7 +78,9 @@ group :app do
 end
 
 group :deployment do
-  gem 'heroku', :require => false
+  gem 'capistrano', :require => false
+  gem 'capistrano-ext', :require => false
+  gem 'capistrano-maintenance', :require => false
 end
 
 group :background_tasks do
