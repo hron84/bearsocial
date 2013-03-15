@@ -28,7 +28,7 @@ Jbsocial::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = !!%x(hostname -f).match(/vagrantup/)
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
@@ -49,10 +49,23 @@ Jbsocial::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'jbsocial.hron.me' }
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => 'mailtrap.io',
+    :port                 => 2525,
+    :domain               => 'jbsocial.hron.me',
+    :user_name            => 'jbsocial-0f5790a2dd0c5f72',
+    :password             => '7b7138fceb34d8f1',
+    :authentication       => 'plain',
+    :enable_starttls_auto => false,
+    :openssl_verify_mode  => 0,
+  }
 
   # Enable threaded mode
-  # config.threadsafe!
+  config.threadsafe!
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
