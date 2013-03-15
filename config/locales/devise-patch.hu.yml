@@ -10,3 +10,4 @@ hu:
     sessions:
       sign_in: "Belépés"
       remember_me: Jegyezz meg
+      sign_out: "Kilépés"

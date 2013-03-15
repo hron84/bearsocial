@@ -1,0 +1,14 @@
+.usernav.btn-group.btn-small.pull-right
+  %a.btn.btn-normal.btn-primary(href="#")
+    %i.icon-user.icon-white
+    = current_user.name
+  %a.btn.btn-normal.btn-primary.dropdown-toggle{'data-toggle' => 'dropdown', :href => '#'}
+    %span.caret
+  %ul.dropdown-menu
+    %li
+      %a(href="#") Preferences
+    %li
+      %a(href="#") Friends
+    %li.divider
+    %li
+      = link_to ('<i class="icon-off"></i>' + t('devise.sessions.sign_out')).html_safe, destroy_user_session_path, :method => :delete
