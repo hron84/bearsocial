@@ -72,7 +72,7 @@ group :app do
   # gem 'devise-encryptable'
   gem 'devise-i18n'
 
-  gem 'social_stream', '~> 1.0.0'
+  # gem 'social_stream', '~> 1.0.0'
 
   gem 'strong_parameters'
 end
