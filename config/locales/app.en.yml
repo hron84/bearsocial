@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+  text:
+    all_rights_reserved: All rights reserved.
+  devise:
+    sessions:
+      sign_in: "Sign in"
+      please_sign_in: "Please sign in"

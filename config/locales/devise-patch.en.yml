@@ -1,0 +1,13 @@
+en:
+  devise:
+    links:
+      sign_in: Sign in
+      sign_in_with: Sign in with %{provider}
+      sign_up: Sign up
+      forgot_password: Forgot your password?
+      missed_confirmation: "Didn't receive confirmation instructions?"
+      missed_unlock: "Didn't receive unlock instructions?"
+    sessions:
+      sign_in: "Sign in"
+      remember_me: Remember me
+

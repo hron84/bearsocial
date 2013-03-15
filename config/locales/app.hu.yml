@@ -3,3 +3,16 @@
 
 hu:
   hello: "Hello world"
+  text:
+    all_rights_reserved: "Minden jog fenntartva."
+  devise:
+    sessions:
+      sign_in: "Belépés"
+      please_sign_in: "Jelentkezz be"
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail cím"
+        password: "Jelszó"
+        password_confirmation: "Jelszó megerősítése"
+        name: "Név"
