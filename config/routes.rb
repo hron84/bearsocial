@@ -1,6 +1,10 @@
 Jbsocial::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'sessions' }
 
+  resources :posts
+
+  root :to => 'posts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

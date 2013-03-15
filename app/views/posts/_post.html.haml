@@ -1,0 +1,25 @@
+%li.stream-item
+  .post{:id => "post-#{post.id}"}
+    .post-heading
+      %small.time
+        = time_ago_in_words post.created_at
+      %a.account(href="#")
+        = image_tag post.author.avatar_url, :class => 'avatar img-rounded', :size => '48x48'
+        %strong.full-name= post.author.name
+      %span &rlm;
+      %span.username
+        %b= post.author.email
+    .post-content
+      %strong.post-title= post.title
+      = h post.body
+    %nav.post-foot.clearfix
+      - if post.parent_post
+        in reply to
+        = link_to (post.parent_post.title || post.parent_post.slug), "#{posts_path}#post-#{post.parent_post.id}"
+      %ul.sharebar.pull-right
+        %li
+          %a(href="#" title="Star")
+            %i.icon-star
+        %li
+          %a(href="#" title="Reply")
+            %i.icon-comment
