@@ -1,0 +1,15 @@
+= form_for @post, :html => { :class => 'post-form' } do |f|
+  %fieldset
+    %legend
+      - if @post.parent_post
+        Reply
+      - else
+        New post
+      .counter
+        %span.label= @post.body.try(:size) || 0
+    = f.text_area :body
+    = f.hidden_field :parent_post_id
+
+    .actions
+      = f.submit 'Save', :class => 'btn btn-primary'
+      %button.btn{:class => 'cancel '} Cancel,

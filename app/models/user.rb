@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   def build_avatar_url
     if avatar_url.blank?
       gravatar_id = Digest::MD5::hexdigest(email).downcase
-      avatar_url = "https://gravatar.com/avatar/#{gravatar_id}.png?r=pg"
+      self.avatar_url = "https://gravatar.com/avatar/#{gravatar_id}.png?r=pg"
     end
   end
 end

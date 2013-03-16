@@ -17,6 +17,20 @@ body {
   padding-top: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
+#big-big-wrapper {
+  min-height:100%;
+  position:relative;
+  & > .container {
+    padding-bottom: 60px;
+  }
+}
+
+
+
 .navbar {
   a {
     color: #999999;
@@ -39,6 +53,7 @@ footer {
   position: absolute;
   bottom:  0;
   left: 0;
+  height: 30px;
 
   width: 100%;
   margin: 0;
@@ -79,7 +94,7 @@ footer {
   }
 }
 
-#content-wrapper {
+#content-wrapper, aside.sidebar {
   background: #ffffff;
   border: 1px solid #f5f5f5;
   border-radius: 5px;
@@ -88,7 +103,24 @@ footer {
   padding: 10px;
 }
 
-main {
+main, aside.sidebar {
   font-size:  85%;
 
+}
+
+#facebox form {
+  margin-top: 10px;
+}
+
+#error_explanation {
+  font-size:  85%;
+  h2 {
+    font-size: 100%;
+    color: #ff0000;
+
+  }
+}
+
+.form-search {
+  margin-top: 2px;
 }

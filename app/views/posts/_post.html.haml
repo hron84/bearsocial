@@ -1,7 +1,8 @@
+- parent = defined?(@post) && @post.parent_post == post
 %li.stream-item
-  .post{:id => "post-#{post.id}"}
+  .post{:id => "post-#{post.id}", :class => (post.starred_by?(current_user) ? "starred" : "unstarred") + (parent ? " parent" : "")  }
     .post-heading
-      %small.time
+      %time.time{:datetime => post.created_at.strftime("%FT%T%:z")}
         = time_ago_in_words post.created_at
       %a.account(href="#")
         = image_tag post.author.avatar_url, :class => 'avatar img-rounded', :size => '48x48'
@@ -11,15 +12,21 @@
         %b= post.author.email
     .post-content
       %strong.post-title= post.title
-      = h post.body
+      = markdown post.body
     %nav.post-foot.clearfix
-      - if post.parent_post
+      - if post.parent_post and not parent
         in reply to
-        = link_to (post.parent_post.title || post.parent_post.slug), "#{posts_path}#post-#{post.parent_post.id}"
+        = link_to (post.parent_post.title || post.parent_post.slug), post_path(post.parent_post), :class => 'in-reply-to'
+
       %ul.sharebar.pull-right
         %li
-          %a(href="#" title="Star")
-            %i.icon-star
+          = link_to icon_tag('icon-chevron-right'), post_path(post), :title => t('posts.actions.show')
         %li
-          %a(href="#" title="Reply")
-            %i.icon-comment
+          = link_to icon_tag('icon-star'), unstar_post_path(post), :class => 'unstar', :title => t('posts.actions.unstar')
+        %li
+          = link_to icon_tag('icon-star-empty'), star_post_path(post), :class => 'star', :title => t('posts.actions.star')
+        %li
+          = link_to icon_tag('icon-comment'), new_post_path(:parent => post.id), :class => 'reply', :title => t('posts.actions.reply')
+        - if can? :destroy, post
+          %li
+            = link_to icon_tag('icon-trash'), post, :method => :delete, :confirm => t('questions.confirm_delete'), :title => t('posts.actions.delete')

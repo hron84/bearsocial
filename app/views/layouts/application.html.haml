@@ -18,38 +18,42 @@
 
 
   %body
-    %nav.navbar.navbar-inverse.navbar-fluid-top{:style => 'top: 0'}
-      .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="#")
-            = image_tag 'logo.png', :width => 24, :height => 24
-            JBS Social
-          %nav.container-fluid.nav-collapse
-            %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
-            = render 'shared/usernav'
+    #big-big-wrapper
+      %nav.navbar.navbar-inverse.navbar-fluid-top{:style => 'top: 0'}
+        .navbar-inner
+          .container-fluid
+            %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand{:href => root_url}
+              = image_tag 'logo.png', :width => 24, :height => 24
+              JBS Social
+            %nav.container-fluid.nav-collapse
+              %ul.nav
+                %li= link_to "Link 1", "/path1"
+                %li= link_to "Link 2", "/path2"
+                %li= link_to "Link 3", "/path3"
+              = render 'shared/usernav'
 
-    .container
-      .row-fluid
-        .span7#content-wrapper
-          = yield
-        .span3
-          %aside.well.sidebar-nav
-            Sidebar
+      .container
+        .row-fluid
+          .span7#content-wrapper
+            = yield
+          %aside.span3.sidebar
+            = render 'users/sidebar'
 
 
-      %footer
-        %p.copyright
-          Copyright &copy;
-          %a(href="http://www.jbslabs.com") JBS Labs
-          2013 -
-          =t('text.all_rights_reserved')
+        %footer
+          %p.copyright
+            Copyright &copy;
+            %a(href="http://www.jbslabs.com") JBS Labs
+            2013 -
+            =t('text.some_rights_reserved')
+            |
+            !=t('text.licensed_under_terms', :license => 'CreativeCommons Attribution-NonCommercial-NoDerivs 3.0', :link => 'http://creativecommons.org/licenses/by-nc-nd/3.0/')
+
+
     /
       Javascripts
       \==================================================

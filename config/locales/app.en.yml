@@ -4,8 +4,19 @@
 en:
   hello: "Hello world"
   text:
-    all_rights_reserved: All rights reserved.
+    some_rights_reserved: Some rights reserved.
+    licensed_under_terms: "Design and code licensed under the terms of <a href=\"%{link}\">%{license}</a> license"
+    search: "Search"
   devise:
     sessions:
       sign_in: "Sign in"
       please_sign_in: "Please sign in"
+  posts:
+    actions:
+      unstar: "Unstar"
+      star: "Star"
+      delete: "Delete"
+      reply: "Reply"
+      show: "Show"
+  questions:
+    confirm_delete: "Are you sure you want to delete?"

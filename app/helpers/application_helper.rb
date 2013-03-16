@@ -14,4 +14,13 @@ module ApplicationHelper
     end
   end
 
+  def icon_tag(icon)
+    content_tag :i, '', :class => icon
+  end
+
+  def markdown(text)
+    engine = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :no_intra_emphasis => true, :tables => false)
+    engine.render(text).html_safe
+  end
+
 end

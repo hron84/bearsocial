@@ -4,7 +4,9 @@
 hu:
   hello: "Hello world"
   text:
-    all_rights_reserved: "Minden jog fenntartva."
+    some_rights_reserved: "Néhány jog fenntartva."
+    licensed_under_terms: "Az oldal kódjára és dizájnjára a <a href=\"%{link}\">%{license}</a> licenc feltételei vonatkoznak."
+    search: "Keresés"
   devise:
     sessions:
       sign_in: "Belépés"
@@ -16,3 +18,12 @@ hu:
         password: "Jelszó"
         password_confirmation: "Jelszó megerősítése"
         name: "Név"
+  posts:
+    actions:
+      unstar: "Mégsem kedvenc"
+      star: "Kedvenc"
+      delete: "Törlés"
+      reply: "Válasz"
+      show: "Megnéz"
+  questions:
+    confirm_delete: "Biztosan törlöd?"
