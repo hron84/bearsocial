@@ -1,7 +1,6 @@
-%h1 Editing post
+- if @post.parent_post and not request.xhr?
+  %ol.stream-items
+    = render @post.parent_post
+- else
 
 = render 'form'
-
-= link_to 'Show', @post
-\|
-= link_to 'Back', posts_path

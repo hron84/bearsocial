@@ -20,7 +20,10 @@
 
       %ul.sharebar.pull-right
         %li
-          = link_to icon_tag('icon-chevron-right'), post_path(post), :title => t('posts.actions.show')
+          = link_to icon_tag('icon-chevron-right'), post_path(post), :title => t('posts.actions.show'), :class => 'show-post'
+        - if can? :update, post
+          %li
+            =link_to icon_tag('icon-pencil'), edit_post_path(post), :title => t('posts.actions.edit'), :class => 'edit-post'
         %li
           = link_to icon_tag('icon-star'), unstar_post_path(post), :class => 'unstar', :title => t('posts.actions.unstar')
         %li

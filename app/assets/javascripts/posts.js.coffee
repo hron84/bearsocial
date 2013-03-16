@@ -38,7 +38,8 @@ jQuery ->
       $('.counter span').removeClass('label-important')
       $('.actions input[type="submit"]').removeAttr('disabled')
 
-  $('.add-post, .reply, .in-reply-to').on 'click', (e) ->
+  # Facebox pushing up at various links
+  $('.add-post, .reply, .edit-post, .show-post, .in-reply-to').on 'click', (e) ->
     $.facebox
       ajax: $(this).attr('href')
       e.preventDefault()

@@ -25,5 +25,6 @@ hu:
       delete: "Törlés"
       reply: "Válasz"
       show: "Megnéz"
+      edit: "Szerkesztés"
   questions:
     confirm_delete: "Biztosan törlöd?"

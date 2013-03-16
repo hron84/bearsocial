@@ -45,6 +45,6 @@ class PostsController < InheritedResources::Base
 
 
   def collection
-    @posts ||= Post.friend_posts(current_user).accessible_by(current_ability).order('created_at DESC').page(params[:page])
+    @posts ||= Post.friend_posts(current_user).order('created_at DESC').page(params[:page])
   end
 end

@@ -18,5 +18,6 @@ en:
       delete: "Delete"
       reply: "Reply"
       show: "Show"
+      edit: "Edit"
   questions:
     confirm_delete: "Are you sure you want to delete?"
