@@ -1,0 +1,27 @@
+= twitter_bootstrap_form_for @user, :url => user_profile_path(@user)  do |f|
+  = f.inputs do
+    %legend= t('text.user_settings')
+    = f.text_field :name
+    = f.email_field :email, :input_html => { :disabled => !current_user.admin? }
+    - if current_user.admin?
+      = f.check_box :admin
+    = f.text_field :avatar_url
+    = f.password_field :password
+    = f.password_field :password_confirmation
+    = f.fields_for :profile do |p|
+      %fieldset
+        %legend= t('text.other_settings')
+        = p.text_field :city
+        /= p.text_field :country
+        = p.select :locale, t('activerecord.attributes.profile.locale'), options_for_locale_select
+        = p.country_select :country
+        = p.time_zone_select :timezone
+        = p.phone_field :phone
+        = p.text_field :jabber_id, :class => 'xmpp'
+        = p.text_field :skype_id, :add_on => :prepend do
+          %span.add-on S
+        = p.text_field :twitter_id, :add_on => :prepend do
+          %span.add-on @
+  = f.actions do
+    = f.submit t('text.save')
+    = button_tag t('text.cancel'), 'data-dismiss' => 'modal', :class => 'btn'

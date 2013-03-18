@@ -1,0 +1,71 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+hu:
+  hello: "Hello world"
+  text:
+    some_rights_reserved: "Néhány jog fenntartva."
+    licensed_under_terms: "Az oldal kódjára és dizájnjára a <a href=\"%{link}\">%{license}</a> licenc feltételei vonatkoznak."
+    search: "Keresés"
+    salutation: "Kedves %{name}!"
+    best_regards: "Üdvözlettel:"
+    usernav:
+      preferences: "Beállítások"
+      friends: "Barátok"
+      follows: "Követések kezelése"
+    close: "Bezárás"
+    cancel: "Mégsem"
+    save: "Mentés"
+    user_settings: "Felhasználói beállítások"
+    other_settings: "Egyéb beállítások"
+  devise:
+    sessions:
+      sign_in: "Belépés"
+      please_sign_in: "Jelentkezz be"
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail cím"
+        password: "Jelszó"
+        password_confirmation: "Jelszó megerősítése"
+        name: "Név"
+        avatar_url: "Avatár URL"
+      profile:
+        city: "Város"
+        country: "Ország"
+        timezone: "Időzona"
+        phone: "Telefonszám"
+        jabber_id: "Jabber / GoogleTalk cím"
+        skype_id: "Skype azonosító"
+        twitter_id: "Twitter név"
+        locale: "Nyelv"
+  posts:
+    actions:
+      unstar: "Mégsem kedvenc"
+      star: "Kedvenc"
+      delete: "Törlés"
+      reply: "Válasz"
+      show: "Megnéz"
+      edit: "Szerkesztés"
+  questions:
+    confirm_delete: "Biztosan törlöd?"
+    confirm_unfriend: "Biztosan megszakitod a barátságotokat?"
+  users:
+    actions:
+      follow: "Követés"
+      unfollow: "Leiratkozás"
+      delete: "Törlés"
+      edit: "Profil frissítése"
+      friend: "Barátnak jelöl"
+      unfriend: "Barátság vége"
+    mailers:
+      friend_mailer:
+        text:
+          body: "%{name} barátként jelölt meg az oldalon. Ha szeretnéd viszonozni a jelölést, ezt megteheted az alábbi linkre kattintva:\n\n%{url}"
+        subject: "%{name} barátként jelölt meg!"
+  notices:
+    profile_update_successful: "A profil frissítése sikeres"
+    you_now_following: "Mostantól követed %{name} aktivításait"
+  errors:
+    profile_update_failed: "A profil frissítése sikertelen volt"
+    you_cannot_follow: "Hiba történt, így nem tudod követni %{name} aktivitásait"

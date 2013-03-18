@@ -1,0 +1,6 @@
+.content-header
+  .header-inner
+    %h2 Friends
+%ol.friends.users
+  - current_user.friends.each do |friend|
+    = render friend

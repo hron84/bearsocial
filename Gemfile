@@ -16,8 +16,8 @@ group :assets do
 end
 
 group :test do
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'rspec-rails', :require => false
+  gem 'cucumber-rails', :require => false
 
   gem 'factory_girl', '~> 2.6.1'
   gem 'factory_girl_rails'
@@ -39,6 +39,9 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
   gem 'guard-cucumber', require: false
+  gem 'guard-spork', :require => false
+
+  gem 'spork'
 
   gem 'rb-inotify', '~> 0.9', require: false
 
@@ -46,37 +49,47 @@ group :development do
   gem 'pry-rails'
   
   gem 'thin'
-
-  gem 'vagrant', :require => false
 end
 
 group :production do
   gem 'pg'
 
   gem 'rack-protection'
+  gem 'exception_notification'
 
-  gem 'unicorn'
+  gem 'puma', :github => 'puma/puma'
 end
 
 group :app do
+  gem 'squeel'
+
   gem 'haml-rails'
   gem 'redcarpet'
   
   gem 'inherited_resources'
   gem 'kaminari'
-  gem 'formtastic'
+  gem 'twitter_bootstrap_form_for', :github => 'hron84/twitter_bootstrap_form_for', :branch => 'develop'
 
+  gem 'bcrypt-ruby'
   gem 'devise'
-  # gem 'devise-encryptable'
+  gem 'devise-encryptable'
   gem 'devise-i18n'
 
-  gem 'social_stream', '~> 1.0.0'
+  gem 'cancan'
+
+  # gem 'social_stream', '~> 1.0.0'
+
+  gem 'paperclip'
+
+  gem 'magic-localized_country_select', :github => 'hron84/localized_country_select', :branch => 'fix-rails-select', :require => 'localized_country_select'
 
   gem 'strong_parameters'
 end
 
 group :deployment do
-  gem 'heroku', :require => false
+  gem 'capistrano', :require => false
+  gem 'capistrano-ext', :require => false
+  gem 'capistrano-maintenance', :require => false
 end
 
 group :background_tasks do

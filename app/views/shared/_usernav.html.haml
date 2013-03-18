@@ -1,0 +1,22 @@
+.usernav.btn-group.btn-small.pull-right
+  %a.btn.btn-normal.btn-primary(href="#")
+    %i.icon-user.icon-white
+    = current_user.name
+  %a.btn.btn-normal.btn-primary.dropdown-toggle{'data-toggle' => 'dropdown', :href => '#'}
+    %span.caret
+  %ul.dropdown-menu
+    %li
+      %a{:href => edit_user_profile_path(current_user)}
+        = icon_tag('icon-wrench')
+        = t('text.usernav.preferences')
+    %li
+      %a(href="#")
+        = icon_tag 'icon-heart'
+        = t('text.usernav.friends')
+    %li
+      %a(href="#")
+        = icon_tag 'icon-eye-open'
+        = t('text.usernav.follows')
+    %li.divider
+    %li
+      = link_to (icon_tag('icon-off') + t('devise.sessions.sign_out')).html_safe, destroy_user_session_path, :method => :delete

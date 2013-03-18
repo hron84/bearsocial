@@ -1,0 +1,11 @@
+%main.page-container
+  .content-header
+    .header-inner
+      %h2
+        Listing posts
+        = link_to icon_tag('icon-plus-sign'), new_post_path, :class => 'btn btn-small btn-success add-post'
+  .posts-container
+    %ol.stream-items
+      = render @posts
+      %li.stream-item
+        = paginate @posts

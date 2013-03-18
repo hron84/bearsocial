@@ -1,0 +1,7 @@
+.content-header
+  .header-inner
+    %h2 Users
+%ol.friends.users
+  = render @users
+  %li
+    = paginate @users

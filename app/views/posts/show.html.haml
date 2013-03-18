@@ -1,0 +1,7 @@
+%main.page-container
+  .posts-container
+    %ol.stream-items
+      - if @post.parent_post
+        = render @post.parent_post
+      = render @post
+      = render @post.replies

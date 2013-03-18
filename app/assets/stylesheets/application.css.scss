@@ -1,0 +1,206 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  padding-top: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#big-big-wrapper {
+  min-height:100%;
+  position:relative;
+  & > .container {
+    padding-bottom: 60px;
+  }
+}
+
+input.youtube {
+  width: 94%;
+  background-image: url(/assets/youtube.png);
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  padding-left: 26px;
+}
+
+.navbar {
+  a {
+    color: #999999;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    padding: 10px 15px 10px;
+    text-decoration: none;
+
+    &.btn {
+      color:  #ffffff;
+    }
+
+    &:hover, &:focus {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  height: 30px;
+
+  width: 100%;
+  margin: 0;
+
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  border-color: #252525;
+
+  color:  #ffffff;
+
+  text-align: center;
+
+  p.copyright {
+    margin: 5px;
+    font-size: x-small;
+
+    a {
+      color: #ffffff;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#content-wrapper, aside.sidebar {
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 10px;
+}
+
+main, aside.sidebar {
+  font-size:  85%;
+
+}
+
+aside.sidebar .user-slogan {
+  display: none;
+}
+
+#facebox form {
+  margin-top: 10px;
+}
+
+#error_explanation {
+  font-size:  85%;
+  h2 {
+    font-size: 100%;
+    color: #ff0000;
+
+  }
+}
+
+form ol {
+  margin: 0;
+  li {
+    display: inline;
+
+  }
+}
+
+form .input.error {
+  border-color: #953b39;
+}
+
+form .inline-errors {
+  color: #953b39;
+}
+
+ol.users {
+  list-style: none;
+  margin:  0;
+
+  li.user {
+    margin-top: 10px;
+    border-bottom: 1px solid #eeeeee;
+
+    a.account {
+      display: block;
+
+      .full-name {
+        padding-left: 5px;
+      }
+      .avatar {
+        float: left;
+      }
+    }
+    b {
+      font-size: small;
+    }
+
+    .user-foot {
+      ul.friendbar {
+        list-style: none;
+
+        li {
+          display: inline;
+
+          a {
+            color: #999999;
+
+            &:hover, &:focus {
+              color: #0088cc;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user.followed a.follow,
+.user.nonfollowed a.unfollow,
+.user.friend a.befriend,
+.user.nonfriend a.unfriend {
+  display: none;
+}
+
+.users .pagination,
+.stream-items .pagination {
+  font-size: 130%;
+  margin: 0;
+
+  text-align: center;
+  width: 100%;
+}
