@@ -32,15 +32,20 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :read, Post
-      can :manage, Post do |post|
+      can [:read, :create], Post
+
+      can :manage, Post, ['author_id = ?', user.id] do |post|
         post.author_id == user.id
       end
 
       can :read, User
-      can :manage, User do |victim|
-        victim.id == user.id
-      end
+      can [:follow, :unfollow, :friend, :unfriend], User
+
+      can :manage, User, :id => user.id
+
+      can :manage, Profile, :user_id => user.id
+
+      can :manage, Following, :user_id => user.id
     end
   end
 end

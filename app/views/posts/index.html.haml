@@ -7,3 +7,5 @@
   .posts-container
     %ol.stream-items
       = render @posts
+      %li.stream-item
+        = paginate @posts

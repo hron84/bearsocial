@@ -6,9 +6,17 @@
     %span.caret
   %ul.dropdown-menu
     %li
-      %a(href="#") Preferences
+      %a{:href => edit_user_profile_path(current_user)}
+        = icon_tag('icon-wrench')
+        = t('text.usernav.preferences')
     %li
-      %a(href="#") Friends
+      %a(href="#")
+        = icon_tag 'icon-heart'
+        = t('text.usernav.friends')
+    %li
+      %a(href="#")
+        = icon_tag 'icon-eye-open'
+        = t('text.usernav.follows')
     %li.divider
     %li
-      = link_to ('<i class="icon-off"></i>' + t('devise.sessions.sign_out')).html_safe, destroy_user_session_path, :method => :delete
+      = link_to (icon_tag('icon-off') + t('devise.sessions.sign_out')).html_safe, destroy_user_session_path, :method => :delete

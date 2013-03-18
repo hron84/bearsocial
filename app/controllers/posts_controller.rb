@@ -36,6 +36,9 @@ class PostsController < InheritedResources::Base
 
   def create
     @post.author = current_user
+    unless @post.video.blank?
+      @post.body << "\n\n#{@post.video}"
+    end
     create! do |success, failure|
       success.html { redirect_to posts_path }
     end

@@ -4,7 +4,7 @@
     .post-heading
       %time.time{:datetime => post.created_at.strftime("%FT%T%:z")}
         = time_ago_in_words post.created_at
-      %a.account(href="#")
+      %a.account{:href => user_path(post.author), :class => 'profile-link'}
         = image_tag post.author.avatar_url, :class => 'avatar img-rounded', :size => '48x48'
         %strong.full-name= post.author.name
       %span &rlm;

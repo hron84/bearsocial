@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
 
   layout :xhr_layout
 
+  def current_profile
+    current_user && (current_user.profile || current_user.build_profile)
+  end
+
   protected
 
   def add_flash

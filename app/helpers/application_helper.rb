@@ -23,4 +23,20 @@ module ApplicationHelper
     engine.render(text).html_safe
   end
 
+  def options_for_locale_select
+    locales =  {}
+    I18n.available_locales.each do |l|
+      l = l.to_s.sub('-', '_')
+      trans = I18n.t("locales.#{l}", :default => '')
+
+      if trans.blank?
+        l, ext = l.split('_')
+        trans = I18n.t("locales.#{l}") + " (#{ext})"
+      end
+      locales[ trans ] = l
+    end
+
+    locales.sort
+  end
+
 end

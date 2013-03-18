@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316181449) do
+ActiveRecord::Schema.define(:version => 20130317141552) do
 
   create_table "followings", :force => true do |t|
     t.integer  "user_id"
     t.integer  "followed_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "friends_users", :id => false, :force => true do |t|
+    t.integer "friend_id"
+    t.integer "user_id"
   end
 
   create_table "posts", :force => true do |t|
@@ -39,8 +44,12 @@ ActiveRecord::Schema.define(:version => 20130316181449) do
     t.string   "jabber_id"
     t.string   "skype_id"
     t.string   "twitter_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.string   "locale",       :limit => 2
+    t.string   "timezone",     :limit => 64
+    t.string   "country"
+    t.string   "city"
   end
 
   create_table "stars", :force => true do |t|
@@ -74,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20130316181449) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "avatar_url"
+    t.text     "slogan"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

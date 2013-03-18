@@ -1,4 +1,6 @@
 Jbsocial::Application.routes.draw do
+
+
   devise_for :users, :controllers => { :sessions => 'sessions' }
 
   resources :posts do
@@ -6,6 +8,17 @@ Jbsocial::Application.routes.draw do
       put 'star'
       put 'unstar'
     end
+  end
+
+  resources :users do
+    member do
+      put 'follow'
+      put 'unfollow'
+      put 'friend'
+      put 'unfriend'
+    end
+
+    resource :profile
   end
 
   root :to => 'posts#index'

@@ -8,7 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require jquery.facebox
  *= require_tree .
  *= require_self
  */
@@ -29,7 +28,13 @@ html, body {
   }
 }
 
-
+input.youtube {
+  width: 94%;
+  background-image: url(/assets/youtube.png);
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  padding-left: 26px;
+}
 
 .navbar {
   a {
@@ -108,6 +113,10 @@ main, aside.sidebar {
 
 }
 
+aside.sidebar .user-slogan {
+  display: none;
+}
+
 #facebox form {
   margin-top: 10px;
 }
@@ -121,6 +130,77 @@ main, aside.sidebar {
   }
 }
 
-.form-search {
-  margin-top: 2px;
+form ol {
+  margin: 0;
+  li {
+    display: inline;
+
+  }
+}
+
+form .input.error {
+  border-color: #953b39;
+}
+
+form .inline-errors {
+  color: #953b39;
+}
+
+ol.users {
+  list-style: none;
+  margin:  0;
+
+  li.user {
+    margin-top: 10px;
+    border-bottom: 1px solid #eeeeee;
+
+    a.account {
+      display: block;
+
+      .full-name {
+        padding-left: 5px;
+      }
+      .avatar {
+        float: left;
+      }
+    }
+    b {
+      font-size: small;
+    }
+
+    .user-foot {
+      ul.friendbar {
+        list-style: none;
+
+        li {
+          display: inline;
+
+          a {
+            color: #999999;
+
+            &:hover, &:focus {
+              color: #0088cc;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user.followed a.follow,
+.user.nonfollowed a.unfollow,
+.user.friend a.befriend,
+.user.nonfriend a.unfriend {
+  display: none;
+}
+
+.users .pagination,
+.stream-items .pagination {
+  font-size: 130%;
+  margin: 0;
+
+  text-align: center;
+  width: 100%;
 }

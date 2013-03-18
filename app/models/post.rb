@@ -1,5 +1,10 @@
 class Post < ActiveRecord::Base
-  attr_accessible :author_id, :body, :deleted, :published, :title, :parent_post_id
+
+  YOUTUBE_REGEX = %r{https?://(www\.)?(youtube.com/watch\?v=|youtu.be/)([a-zA-Z0-9]+)\S+}
+
+  attr_accessor :video
+
+  attr_accessible :author_id, :body, :deleted, :published, :title, :parent_post_id, :video
 
 
   belongs_to :parent_post, :class_name => 'Post'
@@ -9,12 +14,16 @@ class Post < ActiveRecord::Base
   has_many :replies, :class_name => 'Post', :foreign_key => 'parent_post_id'
 
   before_validation :build_title_and_slug
+  before_save :replace_video_embed_code
+
 
   # TODO test race condition too!
   validates_presence_of :slug
   validates_uniqueness_of :slug
   validates_length_of :body, :maximum => 1000
 
+
+  validates_format_of :video, :with => YOUTUBE_REGEX, :allow_blank => true
 
   def to_param
     slug
@@ -25,12 +34,21 @@ class Post < ActiveRecord::Base
   end
 
   def self.friend_posts(user)
-    uids = user.followed_ids
+    uids = user.followings.collect(&:followed_id)
     uids << user.id
     where{ author_id >> uids }
   end
 
   private
+
+  def replace_video_embed_code
+    self.body = self.body.sub(
+        YOUTUBE_REGEX,
+        '<a href="http://youtu.be/\3" class="youtube-link"><img src="http://img.youtube.com/vi/\3/0.jpg" width="480" height="360" /></a>'
+    )
+  end
+
+
 
   def build_title_and_slug
     build_title

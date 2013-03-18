@@ -16,8 +16,8 @@ group :assets do
 end
 
 group :test do
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'rspec-rails', :require => false
+  gem 'cucumber-rails', :require => false
 
   gem 'factory_girl', '~> 2.6.1'
   gem 'factory_girl_rails'
@@ -61,19 +61,27 @@ group :production do
 end
 
 group :app do
+  gem 'squeel'
+
   gem 'haml-rails'
   gem 'redcarpet'
   
   gem 'inherited_resources'
   gem 'kaminari'
-  gem 'formtastic'
+  gem 'twitter_bootstrap_form_for', :github => 'hron84/twitter_bootstrap_form_for', :branch => 'develop'
 
   gem 'bcrypt-ruby'
   gem 'devise'
   gem 'devise-encryptable'
   gem 'devise-i18n'
 
+  gem 'cancan'
+
   # gem 'social_stream', '~> 1.0.0'
+
+  gem 'paperclip'
+
+  gem 'magic-localized_country_select', :github => 'hron84/localized_country_select', :branch => 'fix-rails-select', :require => 'localized_country_select'
 
   gem 'strong_parameters'
 end

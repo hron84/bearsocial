@@ -35,10 +35,12 @@
                 %li= link_to "Link 2", "/path2"
                 %li= link_to "Link 3", "/path3"
               = render 'shared/usernav'
+              = render 'shared/topsearch'
 
       .container
         .row-fluid
           .span7#content-wrapper
+            = bootstrap_flash
             = yield
           %aside.span3.sidebar
             = render 'users/sidebar'
@@ -53,6 +55,15 @@
             |
             !=t('text.licensed_under_terms', :license => 'CreativeCommons Attribution-NonCommercial-NoDerivs 3.0', :link => 'http://creativecommons.org/licenses/by-nc-nd/3.0/')
 
+
+    #modalHelper.modal.hide.fade(tabindex="-1" role="dialog" aria-hidden="true" style="display: none")
+      .modal-header
+        %button.close(type="button" data-dismiss="modal" aria-hidden="true") x
+        %h3.modal-title
+      .modal-body
+        %p &nbsp;
+      .modal-footer
+        %button.btn.btn-primary(data-dismiss="modal" aria-hidden="true") OK
 
     /
       Javascripts

@@ -3,11 +3,4 @@
     %h2 Friends
 %ol.friends.users
   - current_user.friends.each do |friend|
-    %li.user.friend
-      .user-heading
-        %a.account(href="#")
-          = image_tag friend.avatar_url, :class => 'avatar img-rounded', :size => '48x48'
-          %strong.full-name= friend.name
-        %span &rlm;
-        %span.username
-          %b= friend.email
+    = render friend

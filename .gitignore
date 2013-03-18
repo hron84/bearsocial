@@ -36,6 +36,7 @@
 /nbproject/private/
 
 # Ignore temp files
+/.sass-cache
 *.tmp
 *.orig
 *.rej
