@@ -1,0 +1,6 @@
+- if @post.parent_post and not request.xhr?
+  %ol.stream-items
+    = render @post.parent_post
+- else
+
+= render 'form'

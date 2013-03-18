@@ -1,0 +1,578 @@
+---
+en:
+  locales:
+    ab: Abkhazian
+    ace: Achinese
+    ach: Acoli
+    ada: Adangme
+    ady: Adyghe
+    ae: Avestan
+    af: Afrikaans
+    afa: Afro-asiatic language
+    afh: Afrihili
+    agq: Aghem
+    ain: Ainu
+    ak: Akan
+    akk: Akkadian
+    ale: Aleut
+    alg: Algonquian language
+    alt: Southern altai
+    am: Amharic
+    an: Aragonese
+    ang: Old english
+    anp: Angika
+    apa: Apache language
+    ar: Arabic
+    ar_001: Modern standard arabic
+    arc: Aramaic
+    arn: Mapuche
+    arp: Arapaho
+    art: Artificial language
+    arw: Arawak
+    as: Assamese
+    asa: Asu
+    ast: Asturian
+    ath: Athapascan language
+    aus: Australian language
+    av: Avaric
+    awa: Awadhi
+    ay: Aymara
+    az: Azerbaijani
+    ba: Bashkir
+    bad: Banda
+    bai: Bamileke language
+    bal: Baluchi
+    ban: Balinese
+    bas: Basaa
+    bat: Baltic language
+    bax: Bamun
+    bbj: Ghomala
+    be: Belarusian
+    bej: Beja
+    bem: Bemba
+    ber: Berber
+    bez: Bena
+    bfd: Bafut
+    bg: Bulgarian
+    bh: Bihari
+    bho: Bhojpuri
+    bi: Bislama
+    bik: Bikol
+    bin: Bini
+    bkm: Kom
+    bla: Siksika
+    bm: Bambara
+    bn: Bengali
+    bnt: Bantu
+    bo: Tibetan
+    br: Breton
+    bra: Braj
+    brx: Bodo
+    bs: Bosnian
+    bss: Akoose
+    btk: Batak
+    bua: Buriat
+    bug: Buginese
+    bum: Bulu
+    byn: Blin
+    byv: Medumba
+    ca: Catalan
+    cad: Caddo
+    cai: Central american indian language
+    car: Carib
+    cau: Caucasian language
+    cay: Cayuga
+    cch: Atsam
+    ce: Chechen
+    ceb: Cebuano
+    cel: Celtic language
+    cgg: Chiga
+    ch: Chamorro
+    chb: Chibcha
+    chg: Chagatai
+    chk: Chuukese
+    chm: Mari
+    chn: Chinook jargon
+    cho: Choctaw
+    chp: Chipewyan
+    chr: Cherokee
+    chy: Cheyenne
+    ckb: Sorani kurdish
+    cmc: Chamic language
+    co: Corsican
+    cop: Coptic
+    cpe: English-based creole or pidgin
+    cpf: French-based creole or pidgin
+    cpp: Portuguese-based creole or pidgin
+    cr: Cree
+    crh: Crimean turkish
+    crp: Creole or pidgin
+    cs: Czech
+    csb: Kashubian
+    cu: Church slavic
+    cus: Cushitic language
+    cv: Chuvash
+    cy: Welsh
+    da: Danish
+    dak: Dakota
+    dar: Dargwa
+    dav: Taita
+    day: Dayak
+    de: German
+    de_at: Austrian german
+    de_ch: Swiss high german
+    del: Delaware
+    den: Slave
+    dgr: Dogrib
+    din: Dinka
+    dje: Zarma
+    doi: Dogri
+    dra: Dravidian language
+    dsb: Lower sorbian
+    dua: Duala
+    dum: Middle dutch
+    dv: Divehi
+    dyo: Jola-fonyi
+    dyu: Dyula
+    dz: Dzongkha
+    dzg: Dazaga
+    ebu: Embu
+    ee: Ewe
+    efi: Efik
+    egy: Ancient egyptian
+    eka: Ekajuk
+    el: Greek
+    elx: Elamite
+    en: English
+    en_au: Australian english
+    en_ca: Canadian english
+    en_gb: British english
+    en_us: U.s. english
+    enm: Middle english
+    eo: Esperanto
+    es: Spanish
+    es_419: Latin american spanish
+    es_es: European spanish
+    et: Estonian
+    eu: Basque
+    ewo: Ewondo
+    fa: Persian
+    fan: Fang
+    fat: Fanti
+    ff: Fulah
+    fi: Finnish
+    fil: Filipino
+    fiu: Finno-ugrian language
+    fj: Fijian
+    fo: Faroese
+    fon: Fon
+    fr: French
+    fr_ca: Canadian french
+    fr_ch: Swiss french
+    frm: Middle french
+    fro: Old french
+    frr: Northern frisian
+    frs: Eastern frisian
+    fur: Friulian
+    fy: Western frisian
+    ga: Irish
+    gaa: Ga
+    gay: Gayo
+    gba: Gbaya
+    gd: Scottish gaelic
+    gem: Germanic language
+    gez: Geez
+    gil: Gilbertese
+    gl: Galician
+    gmh: Middle high german
+    gn: Guarani
+    goh: Old high german
+    gon: Gondi
+    gor: Gorontalo
+    got: Gothic
+    grb: Grebo
+    grc: Ancient greek
+    gsw: Swiss german
+    gu: Gujarati
+    guz: Gusii
+    gv: Manx
+    gwi: Gwichʼin
+    ha: Hausa
+    hai: Haida
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hil: Hiligaynon
+    him: Himachali
+    hit: Hittite
+    hmn: Hmong
+    ho: Hiri motu
+    hr: Croatian
+    hsb: Upper sorbian
+    ht: Haitian
+    hu: Hungarian
+    hup: Hupa
+    hy: Armenian
+    hz: Herero
+    ia: Interlingua
+    iba: Iban
+    ibb: Ibibio
+    id: Indonesian
+    ie: Interlingue
+    ig: Igbo
+    ii: Sichuan yi
+    ijo: Ijo
+    ik: Inupiaq
+    ilo: Iloko
+    inc: Indic language
+    ine: Indo-european language
+    inh: Ingush
+    io: Ido
+    ira: Iranian language
+    iro: Iroquoian language
+    is: Icelandic
+    it: Italian
+    iu: Inuktitut
+    ja: Japanese
+    jbo: Lojban
+    jgo: Ngomba
+    jmc: Machame
+    jpr: Judeo-persian
+    jrb: Judeo-arabic
+    jv: Javanese
+    ka: Georgian
+    kaa: Kara-kalpak
+    kab: Kabyle
+    kac: Kachin
+    kaj: Jju
+    kam: Kamba
+    kar: Karen
+    kaw: Kawi
+    kbd: Kabardian
+    kbl: Kanembu
+    kcg: Tyap
+    kde: Makonde
+    kea: Kabuverdianu
+    kfo: Koro
+    kg: Kongo
+    kha: Khasi
+    khi: Khoisan language
+    kho: Khotanese
+    khq: Koyra chiini
+    ki: Kikuyu
+    kj: Kuanyama
+    kk: Kazakh
+    kkj: Kako
+    kl: Kalaallisut
+    kln: Kalenjin
+    km: Khmer
+    kmb: Kimbundu
+    kn: Kannada
+    ko: Korean
+    kok: Konkani
+    kos: Kosraean
+    kpe: Kpelle
+    kr: Kanuri
+    krc: Karachay-balkar
+    krl: Karelian
+    kro: Kru
+    kru: Kurukh
+    ks: Kashmiri
+    ksb: Shambala
+    ksf: Bafia
+    ksh: Colognian
+    ku: Kurdish
+    kum: Kumyk
+    kut: Kutenai
+    kv: Komi
+    kw: Cornish
+    ky: Kirghiz
+    la: Latin
+    lad: Ladino
+    lag: Langi
+    lah: Lahnda
+    lam: Lamba
+    lb: Luxembourgish
+    lez: Lezghian
+    lg: Ganda
+    li: Limburgish
+    lkt: Lakota
+    ln: Lingala
+    lo: Lao
+    lol: Mongo
+    loz: Lozi
+    lt: Lithuanian
+    lu: Luba-katanga
+    lua: Luba-lulua
+    lui: Luiseno
+    lun: Lunda
+    luo: Luo
+    lus: Mizo
+    luy: Luyia
+    lv: Latvian
+    mad: Madurese
+    maf: Mafa
+    mag: Magahi
+    mai: Maithili
+    mak: Makasar
+    man: Mandingo
+    map: Austronesian language
+    mas: Masai
+    mde: Maba
+    mdf: Moksha
+    mdr: Mandar
+    men: Mende
+    mer: Meru
+    mfe: Morisyen
+    mg: Malagasy
+    mga: Middle irish
+    mgh: Makhuwa-meetto
+    mgo: Meta'
+    mh: Marshallese
+    mi: Maori
+    mic: Micmac
+    min: Minangkabau
+    mis: Miscellaneous language
+    mk: Macedonian
+    mkh: Mon-khmer language
+    ml: Malayalam
+    mn: Mongolian
+    mnc: Manchu
+    mni: Manipuri
+    mno: Manobo language
+    mo: Moldavian
+    moh: Mohawk
+    mos: Mossi
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    mua: Mundang
+    mul: Multiple languages
+    mun: Munda language
+    mus: Creek
+    mwl: Mirandese
+    mwr: Marwari
+    my: Burmese
+    mye: Myene
+    myn: Mayan language
+    myv: Erzya
+    na: Nauru
+    nah: Nahuatl
+    nai: North american indian language
+    nap: Neapolitan
+    naq: Nama
+    nb: Norwegian bokmål
+    nd: North ndebele
+    nds: Low german
+    ne: Nepali
+    new: Newari
+    ng: Ndonga
+    nia: Nias
+    nic: Niger-kordofanian language
+    niu: Niuean
+    nl: Dutch
+    nl_be: Flemish
+    nmg: Kwasio
+    nn: Norwegian nynorsk
+    nnh: Ngiemboon
+    'no': Norwegian
+    nog: Nogai
+    non: Old norse
+    nqo: N’ko
+    nr: South ndebele
+    nso: Northern sotho
+    nub: Nubian language
+    nus: Nuer
+    nv: Navajo
+    nwc: Classical newari
+    ny: Nyanja
+    nym: Nyamwezi
+    nyn: Nyankole
+    nyo: Nyoro
+    nzi: Nzima
+    oc: Occitan
+    oj: Ojibwa
+    om: Oromo
+    or: Oriya
+    os: Ossetic
+    osa: Osage
+    ota: Ottoman turkish
+    oto: Otomian language
+    pa: Punjabi
+    paa: Papuan language
+    pag: Pangasinan
+    pal: Pahlavi
+    pam: Pampanga
+    pap: Papiamento
+    pau: Palauan
+    peo: Old persian
+    phi: Philippine language
+    phn: Phoenician
+    pi: Pali
+    pl: Polish
+    pon: Pohnpeian
+    pra: Prakrit language
+    pro: Old provençal
+    ps: Pashto
+    pt: Portuguese
+    pt_br: Brazilian portuguese
+    pt_pt: European portuguese
+    qu: Quechua
+    raj: Rajasthani
+    rap: Rapanui
+    rar: Rarotongan
+    rm: Romansh
+    rn: Rundi
+    ro: Romanian
+    roa: Romance language
+    rof: Rombo
+    rom: Romany
+    root: Root
+    ru: Russian
+    rup: Aromanian
+    rw: Kinyarwanda
+    rwk: Rwa
+    sa: Sanskrit
+    sad: Sandawe
+    sah: Sakha
+    sai: South american indian language
+    sal: Salishan language
+    sam: Samaritan aramaic
+    saq: Samburu
+    sas: Sasak
+    sat: Santali
+    sba: Ngambay
+    sbp: Sangu
+    sc: Sardinian
+    scn: Sicilian
+    sco: Scots
+    sd: Sindhi
+    se: Northern sami
+    see: Seneca
+    seh: Sena
+    sel: Selkup
+    sem: Semitic language
+    ses: Koyraboro senni
+    sg: Sango
+    sga: Old irish
+    sgn: Sign language
+    sh: Serbo-croatian
+    shi: Tachelhit
+    shn: Shan
+    shu: Chadian arabic
+    si: Sinhala
+    sid: Sidamo
+    sio: Siouan language
+    sit: Sino-tibetan language
+    sk: Slovak
+    sl: Slovenian
+    sla: Slavic language
+    sm: Samoan
+    sma: Southern sami
+    smi: Sami language
+    smj: Lule sami
+    smn: Inari sami
+    sms: Skolt sami
+    sn: Shona
+    snk: Soninke
+    so: Somali
+    sog: Sogdien
+    son: Songhai
+    sq: Albanian
+    sr: Serbian
+    srn: Sranan tongo
+    srr: Serer
+    ss: Swati
+    ssa: Nilo-saharan language
+    ssy: Saho
+    st: Southern sotho
+    su: Sundanese
+    suk: Sukuma
+    sus: Susu
+    sux: Sumerian
+    sv: Swedish
+    sw: Swahili
+    swb: Comorian
+    swc: Congo swahili
+    syc: Classical syriac
+    syr: Syriac
+    ta: Tamil
+    tai: Tai language
+    te: Telugu
+    tem: Timne
+    teo: Teso
+    ter: Tereno
+    tet: Tetum
+    tg: Tajik
+    th: Thai
+    ti: Tigrinya
+    tig: Tigre
+    tiv: Tiv
+    tk: Turkmen
+    tkl: Tokelau
+    tl: Tagalog
+    tlh: Klingon
+    tli: Tlingit
+    tmh: Tamashek
+    tn: Tswana
+    to: Tongan
+    tog: Nyasa tonga
+    tpi: Tok pisin
+    tr: Turkish
+    trv: Taroko
+    ts: Tsonga
+    tsi: Tsimshian
+    tt: Tatar
+    tum: Tumbuka
+    tup: Tupi language
+    tut: Altaic language
+    tvl: Tuvalu
+    tw: Twi
+    twq: Tasawaq
+    ty: Tahitian
+    tyv: Tuvinian
+    tzm: Central atlas tamazight
+    udm: Udmurt
+    ug: Uyghur
+    uga: Ugaritic
+    uk: Ukrainian
+    umb: Umbundu
+    und: Unknown language
+    ur: Urdu
+    uz: Uzbek
+    vai: Vai
+    ve: Venda
+    vi: Vietnamese
+    vo: Volapük
+    vot: Votic
+    vun: Vunjo
+    wa: Walloon
+    wae: Walser
+    wak: Wakashan language
+    wal: Wolaytta
+    war: Waray
+    was: Washo
+    wen: Sorbian language
+    wo: Wolof
+    xal: Kalmyk
+    xh: Xhosa
+    xog: Soga
+    yao: Yao
+    yap: Yapese
+    yav: Yangben
+    ybb: Yemba
+    yi: Yiddish
+    yo: Yoruba
+    ypk: Yupik language
+    yue: Cantonese
+    za: Zhuang
+    zap: Zapotec
+    zbl: Blissymbols
+    zen: Zenaga
+    zh: Chinese
+    zh_hans: Simplified chinese
+    zh_hant: Traditional chinese
+    znd: Zande
+    zu: Zulu
+    zun: Zuni
+    zza: Zaza

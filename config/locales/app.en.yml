@@ -3,3 +3,60 @@
 
 en:
   hello: "Hello world"
+  text:
+    some_rights_reserved: Some rights reserved.
+    licensed_under_terms: "Design and code licensed under the terms of <a href=\"%{link}\">%{license}</a> license"
+    search: "Search"
+    salutation: "Dear %{name},"
+    best_regards: "Best regards,"
+    usernav:
+      preferences: "Preferences"
+      friends: "Friends"
+      follows: "Manage follows"
+    close: "Close"
+    cancel: "Cancel"
+    save: "Save"
+    user_settings: "Profile settings"
+    other_settings: "Other settings"
+  devise:
+    sessions:
+      sign_in: "Sign in"
+      please_sign_in: "Please sign in"
+  activerecord:
+    attributes:
+      profile:
+        phone: "Phone number"
+        jabber_id: "Jabber/GTalk ID"
+        skype_id: "Skype ID"
+        twitter_id: "Twitter ID"
+        locale: "Locale"
+  posts:
+    actions:
+      unstar: "Unstar"
+      star: "Star"
+      delete: "Delete"
+      reply: "Reply"
+      show: "Show"
+      edit: "Edit"
+  questions:
+    confirm_delete: "Are you sure you want to delete?"
+    confirm_unfriend: "Are you sure you want break your friendship?"
+  users:
+    actions:
+      follow: "Follow"
+      unfollow: "Unfollow"
+      delete: "Delete"
+      edit: "Edit profile"
+      friend: "Mark as friend"
+      unfriend: "Break friendship"
+    mailers:
+      friend_mailer:
+        text:
+          body: "%{name} marked you as a friend on the site. If you want mark him back, you can do it on following URL:\n\n%{url}"
+        subject: "%{name} marked you as a friend!"
+  notices:
+    profile_update_successful: "Profile successfully updated"
+    you_now_following: "You now following %{name}'s activities"
+  errors:
+    profile_update_failed: "Profile update failed"
+    you_cannot_follow: "An error occurred, you cannot follow %{name}"

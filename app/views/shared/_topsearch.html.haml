@@ -1,0 +1,5 @@
+= form_for 'search', :url => '#', :html => { :class => 'navbar-form form-search' } do |f|
+  .input-append
+    = f.text_field :query, :class => 'span2 search-query', :placeholder => t('text.search')
+    %button(type="submit" name="commit" class="btn")
+      = icon_tag 'icon-search'

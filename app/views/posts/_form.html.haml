@@ -1,0 +1,17 @@
+- if @post.parent_post
+  - legend = "Reply"
+- elsif not @post.new_record?
+  - legend = "Edit post"
+- else
+  - legend = "New post"
+
+- legend << sprintf('<div class="counter"><span class="label">%d</span></div>', (@post.body.try(:size) || 0))
+
+= twitter_bootstrap_form_for @post, :html => { :class => 'post-form' } do |f|
+  = f.inputs legend.html_safe do
+    = f.text_area :body, false
+    = f.hidden_field :parent_post_id
+    = f.text_field :video, false, :class => 'youtube'
+  = f.actions do
+    = f.submit t('text.save') #, :class => 'btn btn-primary'
+    = button_tag t('text.cancel'), :class => 'btn cancel', 'data-dismiss' => 'modal'

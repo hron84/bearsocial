@@ -1,0 +1,125 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.content-header {
+  border-bottom:  1px solid #eeeeee;
+
+  .header-inner {
+    text-align: center;
+  }
+
+  h2 {
+    font-size:  150%;
+    margin-bottom: 0;
+  }
+  .add-post {
+    float: right;
+    margin-top: 5px;
+  }
+}
+
+ol.stream-items {
+
+  list-style: none;
+  margin:  0;
+
+  li.stream-item {
+    padding: 10px 0;
+
+    .post {
+      position: relative;
+      min-height: 51px;
+      padding: 9px 5px 9px 60px;
+      cursor: pointer;
+      border-bottom:  1px solid #eeeeee;
+
+      &.parent {
+        background-color: #cccccc;
+
+        .time {
+          color: #999999;
+        }
+      }
+    }
+    .post-heading {
+      s {
+        text-decoration: none;
+      }
+
+      b {
+        color:  #999999;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+    .post-title {
+      display: block;
+    }
+
+    .avatar {
+      position: absolute;
+      top: 12px;
+      left: 4px;
+    }
+    .time {
+      position: relative;
+      margin-top: 1px;
+      float: right;
+      color: #bbbbbb;
+    }
+  }
+
+  .post-content {
+    h1, h2, h3, h4 {
+      font-size:  85%;
+    }
+  }
+
+  ul.sharebar {
+    list-style: none;
+
+    li {
+      display: inline;
+
+      a {
+        color: #999999;
+
+        &:hover, &:focus {
+          color: #0088cc;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.post.starred a.star,
+.post.unstarred a.unstar {
+  display: none;
+}
+
+.post-form {
+
+  ul, li {
+    list-style: none;
+  }
+
+  textarea {
+    width: 97%;
+    max-height: 200px;
+  }
+
+  .counter {
+    float: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .modal .post-form {
+    width: auto;
+
+  }
+}

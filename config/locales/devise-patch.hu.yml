@@ -1,0 +1,13 @@
+hu:
+  devise:
+    links:
+      sign_in: Belépés
+      sign_in_with: "Belépés ezzel: %{provider}"
+      sign_up: Regisztráció
+      forgot_password: Elfelejtetted a jelszavad?
+      missed_confirmation: "Nem kaptál megerősítő levelet?"
+      missed_unlock: "Nem kaptad meg a feloldáshoz a levelet?"
+    sessions:
+      sign_in: "Belépés"
+      remember_me: Jegyezz meg
+      sign_out: "Kilépés"

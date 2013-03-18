@@ -1,0 +1,27 @@
+%li.user{:id => "user-#{user.id}", :class => (current_user.follows?(user) ? "followed" : "nonfollowed") + (current_user.friend_of?(user) ? " friend" : " nonfriend")}
+  .user-heading
+    %a.account{:href => user_path(user), :class => 'profile-link'}
+      = image_tag user.avatar_url, :class => 'avatar img-rounded', :size => '48x48'
+      %strong.full-name= user.name
+    %span &rlm;
+    %span.username
+      %b= user.email
+  .user-slogan
+    %br/
+    = markdown(user.slogan || 'Lofasz')
+  %nav.user-foot.clearfix
+    %ul.friendbar.pull-right
+      - if can? :update, user
+        %li
+          = link_to icon_tag('icon-pencil'), edit_user_path(user), :class => 'edit', :title => t('users.actions.edit')
+      %li
+        = link_to icon_tag('icon-eye-open'), follow_user_path(user), :class => 'follow', :title => t('users.actions.follow')
+      %li
+        = link_to icon_tag('icon-eye-close'), unfollow_user_path(user), :class => 'unfollow', :title => t('users.actions.unfollow')
+      %li
+        = link_to icon_tag('icon-heart'), friend_user_path(user), :class => 'befriend', :title => t('users.actions.friend')
+      %li
+        = link_to icon_tag('icon-tint'), unfriend_user_path(user), :class => 'unfriend', :title => t('users.actions.unfriend'), :confirm => t('questions.confirm_unfriend')
+      - if can? :delete, user
+        %li
+          = link_to icon_tag('icon-trash'), user_path(user), :method => :delete, :confirm => t('questions.confirm_delete'), :title => t('users.actions.delete')
