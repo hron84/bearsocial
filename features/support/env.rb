@@ -13,7 +13,6 @@ Spork.prefork do
   require 'cucumber/rails'
   require 'capybara/rails'
   require 'warden'
-  require 'faker'
   require 'factory_girl_rails'
 
   # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
