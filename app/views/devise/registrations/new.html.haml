@@ -1,0 +1,14 @@
+= twitter_bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'form-signin' }) do |f|
+  .form-signin-heading
+    %h2= t('devise.registrations.sign_up')
+  = bootstrap_flash
+
+  = f.text_field  :name, false, :placeholder  => localized_attribute_name(User, :name)
+  = f.email_field :email, false, :placeholder => localized_attribute_name(User, :email), :style => 'width: 90%;padding: 7px 9px'
+  = f.password_field :password, false, :placeholder => localized_attribute_name(User, :password)
+  = f.password_field :password_confirmation, false, :placeholder => localized_attribute_name(User, :password_confirmation)
+  
+  =f.actions do
+    = f.submit t('devise.registrations.sign_up')
+
+  = render 'devise/shared/links'

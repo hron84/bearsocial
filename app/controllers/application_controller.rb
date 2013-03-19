@@ -36,7 +36,15 @@ class ApplicationController < ActionController::Base
   end
 
   def xhr_layout
-    request.xhr? ? false : 'application'
+    Rails.logger.info "Current controller is: #{self.class.name}"
+
+    if request.xhr?
+      false
+    elsif self.class.name =~ /^Devise::/
+      'login'
+    else
+      'application'
+    end
   end
 
 end
