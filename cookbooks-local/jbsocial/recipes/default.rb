@@ -43,17 +43,31 @@ database_user 'jbsocial' do
   action :create
 end
 
-rvm_gemset 'ruby-1.9.3-p392@jbsocial' do
+jbs_ruby_str = 'ruby-1.9.3-p392@jbsocial'
+  
+rvm_gemset jbs_ruby_str do
   user 'vagrant'
   action :create
 end
 
-def brake(cmd, product=nil)
-  rvm_shell 'rake db:setup' do
-    ruby_string 'ruby-1.9.3-p392@jbsocial'
+def bexec(cmd, product=nil)
+  rvm_shell "#{cmd}" do
+    ruby_string jbs_ruby_str
     user 'vagrant'
     cwd  '/vagrant'
-    code "bundle exec rake RAILS_ENV=production #{cmd}"
+    environment({ 'RAILS_ENV' => 'production' })
+    code "bundle exec #{cmd}"
+    creates product if product
+  end
+end
+
+def brake(task, product=nil)
+  rvm_shell "rake #{task}" do
+    ruby_string jbs_ruby_str
+    user 'vagrant'
+    cwd  '/vagrant'
+    environment({ 'RAILS_ENV' => 'production' })
+    code "bundle exec rake #{task}"
     creates product if product
   end
 end
@@ -61,21 +75,21 @@ end
 
 if File.exists?('/vagrant/Vagrantfile')
   rvm_shell 'bundle_install' do
-    ruby_string 'ruby-1.9.3-p392@jbsocial'
+    ruby_string jbs_ruby_str
     user 'vagrant'
     cwd  '/vagrant'
     code 'bundle install --without development test'
   end
 
   rvm_wrapper 'bootup' do
-    ruby_string 'ruby-1.9.3-p392@jbsocial'
+    ruby_string jbs_ruby_str
     binary 'puma'
     user 'vagrant'
     action :create
   end
 
   #rvm_shell 'rake db:setup' do
-  #  ruby_string 'ruby-1.9.3-p392@jbsocial'
+  #  ruby_string jbs_ruby_str
   #  user 'vagrant'
   #  cwd  '/vagrant'
   #  code 'bundle exec rake RAILS_ENV=production db:setup'
@@ -85,7 +99,7 @@ if File.exists?('/vagrant/Vagrantfile')
   brake 'db:setup'
 
   #rvm_shell 'rake assets:precompile' do
-  #  ruby_string 'ruby-1.9.3-p392@jbsocial'
+  #  ruby_string jbs_ruby_str
   #  user 'vagrant'
   #  cwd  '/vagrant'
   #  code 'bundle exec rake RAILS_ENV=production assets:precompile'
@@ -93,10 +107,11 @@ if File.exists?('/vagrant/Vagrantfile')
   #end
   brake 'assets:precompile', '/vagrant/public/assets/manifest.yml'
 
-  rvm_shell 'puma_start' do
-    ruby_string 'ruby-1.9.3-p392@jbsocial'
-    user 'vagrant'
-    cwd  '/vagrant'
-    code 'bundle exec /vagrant/script/puma start'
-  end
+  #rvm_shell 'puma_start' do
+  #  ruby_string jbs_ruby_str
+  #  user 'vagrant'
+  #  cwd  '/vagrant'
+  #  code 'bundle exec /vagrant/script/puma start'
+  #end
+  bexec "thin restart -C config/thin.yml"
 end
