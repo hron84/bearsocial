@@ -10,5 +10,11 @@ en:
     sessions:
       sign_in: "Sign in"
       remember_me: Remember me
-
       sign_out: "Sign out"
+    registrations:
+      sign_up: Sign up
+    passwords:
+      forgot_your_password: Forgot your password?
+      button_click_instructions: "To get password reset instructions, click on 'Send it' button"
+      send_it: Send it
+      

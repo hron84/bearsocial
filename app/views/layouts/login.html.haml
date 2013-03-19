@@ -19,15 +19,4 @@
 
   %body
     .container
-      = form_for 'user', :url => user_session_path, :html => { :class => 'form-signin' } do |f|
-        .form-signin-heading
-          %h2= t('devise.sessions.please_sign_in')
-        = bootstrap_flash
-
-        = f.text_field :email, :placeholder => localized_attribute_name(User, :email)
-        = f.password_field :password, :placeholder => localized_attribute_name(User, :password)
-        = f.label :remember_me, "#{f.check_box(:remember_me)} #{t('devise.sessions.remember_me')}".html_safe
-
-        = f.submit t('devise.sessions.sign_in'), :class => 'btn btn-large btn-primary'
-
-        = render 'devise/links'
+      = yield

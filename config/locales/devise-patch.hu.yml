@@ -11,3 +11,9 @@ hu:
       sign_in: "Belépés"
       remember_me: Jegyezz meg
       sign_out: "Kilépés"
+    registrations:
+      sign_up: "Regisztráció"
+    passwords:
+      forgot_your_password: Elfelejtetted a jelszavad?
+      button_click_instructions: "Az új jelszó kéréséhez szükséges instrukciók elküldéséhez kattints a 'Küldd' gombra!"
+      send_it: Küldd!
