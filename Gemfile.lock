@@ -15,13 +15,6 @@ GIT
       actionpack (~> 3)
       railties (~> 3)
 
-GIT
-  remote: git://github.com/puma/puma.git
-  revision: 2e2440024623e91bc4f3eb9052b27164627a60f3
-  specs:
-    puma (2.0.0.b6)
-      rack (>= 1.1, < 2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -367,7 +360,6 @@ DEPENDENCIES
   pg
   pry
   pry-rails
-  puma!
   rack-protection
   rails (~> 3.2.4)
   rails-i18n

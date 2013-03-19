@@ -57,7 +57,8 @@ group :production do
   gem 'rack-protection'
   gem 'exception_notification'
 
-  gem 'puma', :github => 'puma/puma'
+  #gem 'puma', :github => 'puma/puma'
+  gem 'thin'
 end
 
 group :app do
