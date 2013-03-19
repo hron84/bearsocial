@@ -77,4 +77,11 @@ Jbsocial::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.middleware.use ExceptionNotifier,
+                        :email_prefix => "[COMPASS EXCEPTION] ",
+                        :sender_address => %("Compass" <jbsocial@hron.me>),
+                        :exception_recipients => %w(hron@hron.me),
+                        :ignore_crawlers      => %w{Googlebot bingbot},
+                        :ignore_exceptions    => %w() + ExceptionNotifier.default_ignore_exceptions,
+                        :normalize_subject    => true
 end
