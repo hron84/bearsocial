@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.4'
+gem 'rails', '~> 3.2.13'
 gem 'rails-i18n'
 
 group :assets do
@@ -12,7 +12,6 @@ group :assets do
 
   gem 'uglifier'
   gem 'jquery-rails'
-  gem 'facebox-rails'
 end
 
 group :test do
@@ -57,7 +56,6 @@ group :production do
   gem 'rack-protection'
   gem 'exception_notification'
 
-  #gem 'puma', :github => 'puma/puma'
   gem 'thin'
 end
 
@@ -78,19 +76,13 @@ group :app do
 
   gem 'cancan'
 
-  # gem 'social_stream', '~> 1.0.0'
-
-  gem 'paperclip'
-
   gem 'magic-localized_country_select', :github => 'hron84/localized_country_select', :branch => 'fix-rails-select', :require => 'localized_country_select'
 
   gem 'strong_parameters'
 end
 
 group :deployment do
-  gem 'capistrano', :require => false
-  gem 'capistrano-ext', :require => false
-  gem 'capistrano-maintenance', :require => false
+  gem 'heroku'
 end
 
 group :background_tasks do
