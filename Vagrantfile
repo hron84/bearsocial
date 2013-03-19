@@ -17,8 +17,15 @@ Vagrant::Config.run do |config|
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
   
-  config.vm.customize ['modifyvm', :id, '--memory', 768]
-
+  if config.vm.respond_to?(:provider)
+    config.vm.provider :virtualbox do |v|
+      v.customize ['modifyvm', :id, '--memory', 768]
+      v.gui = false
+    end
+  else
+    config.vm.customize ['modifyvm', :id, '--memory', 768]
+    config.vm.boot_mode = :headless
+  end
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
@@ -40,12 +47,13 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
   # config.vm.share_folder "v-data", "/vagrant_data", "../data"
 
-  # set auto_update to false, if do NOT want to check the correct additions 
-  # version when booting this machine
-  config.vbguest.auto_update = true
-
-  # do NOT download the iso file from a webserver
-  config.vbguest.no_remote = false
+  if config.respond_to?(:vbguest)
+    # set auto_update to false, if do NOT want to check the correct additions 
+    # version when booting this machine
+    config.vbguest.auto_update = true 
+    # do NOT download the iso file from a webserver
+    config.vbguest.no_remote = false
+  end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
@@ -86,8 +94,10 @@ Vagrant::Config.run do |config|
   # end
 
   config.vm.provision :chef_solo do |chef|
-    f = File.join(File.dirname(__FILE__), '.chef/data.rb')
-    data = eval(File.read(f))
+    #f = File.join(File.dirname(__FILE__), '.chef/data.rb')
+    f = File.join(File.dirname(__FILE__), '.chef/data.json')
+    #data = eval(File.read(f))
+    data  = JSON.parse File.read(f)
 
     data ||= {'run_list' => []}
     chef.cookbooks_path = %w(cookbooks cookbooks-local)
