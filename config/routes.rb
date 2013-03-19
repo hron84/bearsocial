@@ -10,7 +10,7 @@ Jbsocial::Application.routes.draw do
     end
   end
 
-  resources :users do
+  resources :users, :except => [:create, :new, :edit, :update] do
     member do
       put 'follow'
       put 'unfollow'

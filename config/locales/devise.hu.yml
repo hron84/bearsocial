@@ -5,7 +5,7 @@ hu:
       send_instructions: A megadott címre egy email érkezik a megerősítő linkkel.
       send_paranoid_instructions: Ha az email cím már létezik az adatbázisban, egy emailt küldtünk a további teendőkkel a fiók megerősítéséhez.
     failure:
-      already_authenticated: Már belépett.
+      already_authenticated: Már beléptél.
       inactive: A fiók még nincs aktiválva.
       invalid: Hibás email cím vagy jelszó.
       invalid_token: Hibás bejelentkező token.
@@ -31,12 +31,12 @@ hu:
       updated: A jelszó megváltozott. Bejelentkezve a felhasználói fiókba
       updated_not_active: A jelszó megváltozott
     registrations:
-      destroyed: Felhasználói fiók törölve. Reméljük, még visszatér hozzánk.
+      destroyed: Felhasználói fiók törölve. Reméljük, még visszatérsz hozzánk.
       signed_up: Sikeres regisztráció.
       signed_up_but_inactive: A regisztráció sikerült, azonban a bejelentkezés még nem lehetséges, mert a fiók nincs aktiválva.
       signed_up_but_locked: A regisztráció sikerült, azonban a bejelentkezés még nem lehetséges, mert a fiók zárolt.
-      signed_up_but_unconfirmed: Egy megerősítő linket küldtünk a megadott e-mail címre. Nézze meg az e-mailjeit, és kattintson a küldött linkre a fiók aktiválásához.
-      update_needs_confirmation: A fiók módosítása sikeres, de meg kell erősíteni az e-mail címet. Nézze meg az e-mailjeit, és kattintson a küldött linkre hogy megerősítse az e-mail cím létezését.
+      signed_up_but_unconfirmed: Egy megerősítő linket küldtünk a megadott e-mail címre. Nézd meg az e-mailjeidet, és kattints a küldött linkre a fiók aktiválásához.
+      update_needs_confirmation: A fiók módosítása sikeres, de meg kell erősíteni az e-mail címet. Nézd meg az e-mailjeidet, és kattints a küldött linkre hogy megerősítse az e-mail cím létezését.
       updated: Sikeres fiók módosítás.
     sessions:
       signed_in: Sikeres bejelentkezés.
