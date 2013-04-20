@@ -8,7 +8,7 @@ class PostsController < InheritedResources::Base
 
       respond_to do |format|
         format.json { render :json => star  }
-        format.html { redirect_to request.referer }
+        format.html { redirect_to :back }
       end
     end
   end
@@ -17,11 +17,11 @@ class PostsController < InheritedResources::Base
     if @post.starred_by?(current_user)
       @star = @post.stars.where(:user_id => current_user.id).first
       @star.destroy
+    end
 
-      respond_to do |format|
-        format.html { redirect_to request.referer }
-        format.json { render :json => {} }
-      end
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.json { render :json => {} }
     end
   end
 
@@ -40,6 +40,12 @@ class PostsController < InheritedResources::Base
       @post.body << "\n\n#{@post.video}"
     end
     create! do |success, failure|
+      success.html { redirect_to posts_path }
+    end
+  end
+
+  def update
+    update! do |success, failure|
       success.html { redirect_to posts_path }
     end
   end
