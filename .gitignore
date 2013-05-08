@@ -21,6 +21,7 @@
 
 # Ignore settings
 /config/settings.yml
+/config/thin.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

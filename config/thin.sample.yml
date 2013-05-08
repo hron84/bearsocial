@@ -1,0 +1,19 @@
+---
+stats: /thin-status
+daemonize: true
+threaded: true
+no-epoll: true
+
+log: log/thin.log
+pid: tmp/pids/thin.pid
+
+environment: production
+address: 127.0.0.1
+port: 3001
+
+timeout: 30
+max_conns: 1024
+max_persistent_conns: 100
+wait: 30
+servers: 1
+
