@@ -1,10 +1,10 @@
-# CHANGELOG for jbsocial
+# CHANGELOG for bearsocial
 
-This file is used to list changes made in each version of jbsocial.
+This file is used to list changes made in each version of bearsocial.
 
 ## 0.1.0:
 
-* Initial release of jbsocial
+* Initial release of bearsocial
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

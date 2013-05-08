@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Jbsocial::Application.load_tasks
+Bearsocial::Application.load_tasks

@@ -1,4 +1,4 @@
-Jbsocial::Application.configure do
+Bearsocial::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -19,7 +19,7 @@ Jbsocial::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => 'mailtrap.io',
     :port                 => 2525,
-    :domain               => 'jbsocial.hron.me',
+    :domain               => 'bearsocial.hron.me',
     :user_name            => 'jbsocial-0f5790a2dd0c5f72',
     :password             => '7b7138fceb34d8f1',
     :authentication       => 'plain',
