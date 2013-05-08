@@ -24,6 +24,10 @@ group :test do
   gem 'database_cleaner'
 
   gem 'simplecov'
+
+  # Eyecandy
+  gem 'fuubar'
+  gem 'fuubar-cucumber'
 end
 
 group :development do
