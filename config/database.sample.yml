@@ -26,9 +26,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: jbsocial_production
+  database: bearsocial_production
   pool: 5
-  username: jbsocial
+  username: bearsocial
   password: PASSWORD
   host: localhost
   port: 5432

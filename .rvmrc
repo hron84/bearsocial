@@ -1,7 +1,7 @@
 if [ "$(uname -n | cut -d. -f1 )" = "darkstar" ]; then
   PROJECT_RBXOPT=( -X19 )
-  rvm use --create rbx-head@jbsocial
+  rvm use --create rbx-head@bearsocial
 else
-  rvm use --create ruby-1.9.3@jbsocial
+  rvm use --create ruby-1.9.3@bearsocial
 fi
 

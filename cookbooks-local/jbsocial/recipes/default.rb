@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: jbsocial
+# Cookbook Name:: bearsocial
 # Recipe:: default
 #
 # Copyright 2013, Gabor Garami
@@ -11,8 +11,8 @@
 %w(libmagickcore-dev libmagickwand-dev imagemagick libsndfile1-dev nodejs).each { |pkg| package pkg }
 
 
-cookbook_file "#{node['nginx']['dir']}/sites-available/jbsocial.hron.me" do
-  source "jbsocial.conf"
+cookbook_file "#{node['nginx']['dir']}/sites-available/bearsocial.hron.me" do
+  source "bearsocial.conf"
   notifies :reload, 'service[nginx]'
 end
 
@@ -20,7 +20,7 @@ template "/vagrant/config/database.yml" do
   source 'database.yml.erb'
 end
 
-nginx_site 'jbsocial.hron.me' do
+nginx_site 'bearsocial.hron.me' do
   enable true
 end
 
@@ -30,20 +30,20 @@ pg_connection_info = {
   :password => node['postgresql']['password']['postgres']
 }
 
-database 'jbsocial_production' do
+database 'bearsocial_production' do
   provider Chef::Provider::Database::Postgresql
   connection pg_connection_info
   action :create
 end
 
-database_user 'jbsocial' do
+database_user 'bearsocial' do
   provider Chef::Provider::Database::PostgresqlUser
   connection pg_connection_info
-  password node['postgresql']['password']['jbsocial'] # Using same bucket
+  password node['postgresql']['password']['bearsocial'] # Using same bucket
   action :create
 end
 
-jbs_ruby_str = 'ruby-1.9.3-p392@jbsocial'
+jbs_ruby_str = 'ruby-1.9.3-p392@bearsocial'
   
 rvm_gemset jbs_ruby_str do
   user 'vagrant'

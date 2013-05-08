@@ -1,4 +1,4 @@
-Jbsocial::Application.routes.draw do
+Bearsocial::Application.routes.draw do
 
 
   devise_for :users, :controllers => { :sessions => 'sessions' }

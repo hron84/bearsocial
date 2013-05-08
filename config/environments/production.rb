@@ -1,4 +1,4 @@
-Jbsocial::Application.configure do
+Bearsocial::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -50,13 +50,13 @@ Jbsocial::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'jbsocial.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'bearsocial.herokuapp.com' }
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address              => 'mailtrap.io',
     :port                 => 2525,
-    :domain               => 'jbsocial.hron.me',
+    :domain               => 'bearsocial.herokuapp.com',
     :user_name            => 'jbsocial-0f5790a2dd0c5f72',
     :password             => '7b7138fceb34d8f1',
     :authentication       => 'plain',
@@ -79,7 +79,7 @@ Jbsocial::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.middleware.use ExceptionNotifier,
                         :email_prefix => "[COMPASS EXCEPTION] ",
-                        :sender_address => %("Compass" <jbsocial@hron.me>),
+                        :sender_address => %("Compass" <bearsocial@hron.me>),
                         :exception_recipients => %w(hron@hron.me),
                         :ignore_crawlers      => %w{Googlebot bingbot},
                         :ignore_exceptions    => %w() + ExceptionNotifier.default_ignore_exceptions,
