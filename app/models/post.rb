@@ -22,6 +22,8 @@ class Post < ActiveRecord::Base
   validates_uniqueness_of :slug
   validates_length_of :body, :maximum => 1000
 
+  # validates_presence_of :body
+  validates_length_of :body, :minimum => 1
 
   validates_format_of :video, :with => YOUTUBE_REGEX, :allow_blank => true
 
@@ -42,10 +44,12 @@ class Post < ActiveRecord::Base
   private
 
   def replace_video_embed_code
-    self.body = self.body.sub(
-        YOUTUBE_REGEX,
-        '<a href="http://youtu.be/\3" class="youtube-link"><img src="http://img.youtube.com/vi/\3/0.jpg" width="480" height="360" /></a>'
-    )
+    if self.body
+      self.body = self.body.sub(
+          YOUTUBE_REGEX,
+          '<a href="http://youtu.be/\3" class="youtube-link"><img src="http://img.youtube.com/vi/\3/0.jpg" width="480" height="360" /></a>'
+      )
+    end
   end
 
 
@@ -82,8 +86,8 @@ class Post < ActiveRecord::Base
   # Builds a title if not present
   def build_title
     if title.blank?
-      lines = body.strip.gsub(/\r\n/, "\n").split(/\n/)
-      if lines.first.match(/\A# (.*)\Z/)
+      lines = body.to_s.strip.gsub(/\r\n/, "\n").split(/\n/)
+      if lines.size > 0 and lines.first.match(/\A# (.*)\Z/)
         self.title = $1
         lines.shift
         self.body = lines.join("\n").strip

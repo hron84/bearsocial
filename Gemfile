@@ -24,6 +24,10 @@ group :test do
   gem 'database_cleaner'
 
   gem 'simplecov'
+
+  # Eyecandy
+  gem 'fuubar'
+  gem 'fuubar-cucumber'
 end
 
 group :development do
@@ -38,9 +42,6 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
   gem 'guard-cucumber', require: false
-  gem 'guard-spork', :require => false
-
-  gem 'spork'
 
   gem 'rb-inotify', '~> 0.9', require: false
 

@@ -1,1 +1,5 @@
+<% if %x(hostname).strip =~ /^darkstar/ %>
+--format Fuubar
+<% end %>
 --color
+--fail-fast

@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Profile do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "validations" do
+    it "should not allow unknown locale" do
+      profile = Profile.new(:locale => 'und') # Unicode undefined
+      profile.should_not be_valid
+      profile.errors[:locale].should_not be_empty
+    end
+  end
 end
